@@ -1,5 +1,5 @@
 package logicaNegocio;
 
-public class TipoPokemon {
+public enum TipoPokemon {
     // TODO: Aquí va tu código
 }

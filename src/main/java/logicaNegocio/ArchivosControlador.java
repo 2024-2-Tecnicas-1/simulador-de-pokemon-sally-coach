@@ -1,6 +1,6 @@
 package logicaNegocio;
 
-import persistencia.ArchivosConexion;
+import persistencia.*;
 
 public class ArchivosControlador {
     public void guardar(Object objeto, String nombreArchivo){
