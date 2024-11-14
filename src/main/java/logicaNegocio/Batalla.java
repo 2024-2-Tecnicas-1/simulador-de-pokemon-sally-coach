@@ -40,10 +40,13 @@ public class Batalla {
         entrenadoresListos.remove(entrenador);
         
         List<Pokemon> pokemones = entrenador.getPokemones();
-        for (Pokemon pokemon : pokemones) {
+        int i = 0;
+        while (i<pokemones.size()) {
+            Pokemon pokemon = pokemones.get(i);
             if (pokemon.getSalud()<=0) {
                 pokemones.remove(pokemon);
             }
+            i++;
         }
         return pokemones;
     }

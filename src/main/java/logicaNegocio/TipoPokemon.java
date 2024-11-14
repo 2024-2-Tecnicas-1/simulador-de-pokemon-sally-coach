@@ -13,7 +13,7 @@ public enum TipoPokemon {
         {  2,   1,   2,   0,   1,   1,   1,   1}, // TIERRA
         {  1,   1,   1,   1,   1,   1,   1,   1}, // NORMAL
         {  1,   1,   1,   1,   1,   2,   1,   1}, // LUCHA
-        {}, // BICHO
+        {  1,   1,   1,   1,   1,   1,   1,   1}, // BICHO
     };
     
     public static double obtenerMultiplicadorDeDaño(TipoPokemon atacante, TipoPokemon defensor) {

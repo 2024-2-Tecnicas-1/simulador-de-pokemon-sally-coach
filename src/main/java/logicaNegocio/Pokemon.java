@@ -59,7 +59,7 @@ public class Pokemon implements Serializable {
     
     
     public String atacar(Pokemon oponente){
-        double dañoTotal = puntosDeAtaque*TipoPokemon.obtenerMultiplicadorDeDaño(TIPO, oponente.getTIPO());
+        int dañoTotal = puntosDeAtaque*(int)TipoPokemon.obtenerMultiplicadorDeDaño(TIPO, oponente.getTIPO());
         oponente.recibirDaño(dañoTotal);
         return nombre + " ataca a " + oponente.getNombre() + " causando " + dañoTotal + " puntos de daño";
     }

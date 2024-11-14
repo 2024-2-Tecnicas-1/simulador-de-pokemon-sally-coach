@@ -138,16 +138,16 @@ public class Consola {
                                         
                                         if (pokemonesDisponibles.isEmpty()) {
                                             System.out.println("No hay Pokémones libres. Registre algún Pokémon");
+                                        } else {
+                                            System.out.println("Lista de Pokémones disponibles:");
+                                            Pokemon pokemon = (Pokemon)seleccionarDeLista(pokemonesDisponibles);
+                                            if (pokemon==null) return;
+                                            entrenador.agregarPokemon(pokemon);
+
+                                            ArchivosControlador.guardar(entrenadores, ARCHIVO_ENTRENADORES);
+                                            ArchivosControlador.guardar(pokemones, ARCHIVO_POKEMONES);
+                                            System.out.println(pokemon.getNombre() + " ha sido agregado al equipo de " + entrenador.getNOMBRE());
                                         }
-                                        
-                                        System.out.println("Lista de Pokémones disponibles:");
-                                        Pokemon pokemon = (Pokemon)seleccionarDeLista(pokemonesDisponibles);
-                                        if (pokemon==null) return;
-                                        entrenador.agregarPokemon(pokemon);
-                                        
-                                        ArchivosControlador.guardar(entrenadores, ARCHIVO_ENTRENADORES);
-                                        ArchivosControlador.guardar(pokemones, ARCHIVO_POKEMONES);
-                                        System.out.println(pokemon.getNombre() + " ha sido agregado al equipo de " + entrenador.getNOMBRE());
                                     }
                                     break;
                                 case 3:
@@ -276,7 +276,7 @@ public class Consola {
             int opcion;
             while (enBatalla) {
                 System.out.println();
-                System.out.println("0. Cancelar Batalla");
+                System.out.println("0. Finalizar Batalla");
                 System.out.println("1. " + pokemon1.getNombre() + ". Atacar");
                 System.out.println("2. " + pokemon2.getNombre() + ". Atacar");
                 System.out.println("3. Automatizar Batalla");
@@ -286,7 +286,7 @@ public class Consola {
                 
                 switch (opcion) {
                     case 0:
-                        System.out.println("Batalla cancelada");
+                        System.out.println("Batalla finalizada");
                         enBatalla = false;
                         break;
                     case 1:
