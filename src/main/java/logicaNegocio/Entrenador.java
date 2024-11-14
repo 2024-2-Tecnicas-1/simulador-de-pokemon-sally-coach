@@ -7,16 +7,16 @@ import java.util.List;
 public class Entrenador implements Serializable {
     // TODO: Aquí va tu código
     
-    private String nombre;
+    private final String NOMBRE;
     private List<Pokemon> pokemones;
 
-    public Entrenador(String nombre) {
-        this.nombre = nombre;
+    public Entrenador(String NOMBRE) {
+        this.NOMBRE = NOMBRE;
         this.pokemones = new LinkedList();
     }
     
-    public String getNombre() {
-        return nombre;
+    public String getNOMBRE() {
+        return NOMBRE;
     }
     
     public List<Pokemon> getPokemones() {
@@ -26,7 +26,7 @@ public class Entrenador implements Serializable {
     
     @Override
     public String toString() {
-        return nombre + ". Pokémones: " + pokemones;
+        return NOMBRE + ". Pokémones: " + pokemones;
     }
 
     

@@ -48,21 +48,34 @@ public class Pokemon implements Serializable {
         this.estado = estado;
     }
     
-    public void atacar(Pokemon oponente){
-        double dañoTotal = puntosDeAtaque*TIPO.obtenerMultiplicadorDeDaño(TIPO, oponente.getTIPO());
-        oponente.recibirDaño(dañoTotal);
+    @Override
+    public String toString() {
+        if (salud>0) {
+            return nombre + " HP: " + salud + " ATK: " + puntosDeAtaque;
+        }
+        
+        return nombre + " HP: " + salud;
     }
     
-    public void recibirDaño(double daño) {
+    
+    public String atacar(Pokemon oponente){
+        double dañoTotal = puntosDeAtaque*TipoPokemon.obtenerMultiplicadorDeDaño(TIPO, oponente.getTIPO());
+        oponente.recibirDaño(dañoTotal);
+        return nombre + " ataca a " + oponente.getNombre() + " causando " + dañoTotal + " puntos de daño";
+    }
+    
+    private void recibirDaño(double daño) {
         salud -= daño;
         if (salud<0) {
             salud = 0;
         }
     }
     
-    public void entrenar() {
-        saludBase ++;
+    public String entrenar() {
+        int incremento = 1;
+        saludBase += incremento;
         salud = saludBase;
-        puntosDeAtaque ++;
+        puntosDeAtaque += incremento;
+        return "[HP: " + (salud-incremento) + "+" + incremento + " ATK: " + (puntosDeAtaque-incremento) + "+" + incremento + "]";
     }
 }

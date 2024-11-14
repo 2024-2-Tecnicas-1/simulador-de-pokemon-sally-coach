@@ -9,7 +9,7 @@ public class Batalla {
     private List<Entrenador> entrenadoresListos;
 
     public Batalla(List<Entrenador> entrenadoresListos) {
-        this.entrenadoresListos = new LinkedList<>(entrenadoresListos);
+        this.entrenadoresListos = new LinkedList(entrenadoresListos);
     }
     
     public List<Entrenador> getEntrenadoresListos() {
@@ -59,8 +59,7 @@ public class Batalla {
             return "Ningún Pokémon aumenta su nivel";
         } else {
             Pokemon ganador = (pokemon1.getSalud()>0) ? pokemon1 : pokemon2;
-            String entreno = ganador.entrenar();
-            return ganador.getNombre() + " gana la batalla y aumenta su nivel. " + entreno;
+            return ganador.getNombre() + " gana la batalla y aumenta su nivel. " + ganador.entrenar();
         }
     }
     
