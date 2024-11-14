@@ -2,3 +2,6 @@
 *.class
 
 target/
+
+datos/entrenadores.simulador
+datos/pokemones.simulador
