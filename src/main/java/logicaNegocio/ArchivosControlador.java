@@ -3,11 +3,11 @@ package logicaNegocio;
 import persistencia.*;
 
 public class ArchivosControlador {
-    public void guardar(Object objeto, String nombreArchivo){
+    public static void guardar(Object objeto, String nombreArchivo){
         ArchivosConexion.guardar(objeto, nombreArchivo);
     }
     
-    public Object leer(String nombreArchivo){
+    public static Object leer(String nombreArchivo){
         return ArchivosConexion.leer(nombreArchivo);
     }
 }
