@@ -2,7 +2,7 @@
 package logicaNegocio;
 
 public class Electrode extends Pokemon {
-public Electrode (String NOMBRE){
-    super(NOMBRE, 60, 50 ,TipoPokemon.ELECTRICO);
+public Electrode (String nombre){
+    super(nombre, 60, 50 ,TipoPokemon.ELECTRICO);
     }
 }

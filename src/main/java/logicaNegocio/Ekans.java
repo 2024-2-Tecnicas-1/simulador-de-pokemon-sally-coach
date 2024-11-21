@@ -2,8 +2,8 @@
 package logicaNegocio;
 
 public class Ekans extends Pokemon {
-    public Ekans (String NOMBRE){
-        super(NOMBRE, 35, 60,TipoPokemon.VENENO);
+    public Ekans (String nombre){
+        super(nombre, 35, 60,TipoPokemon.VENENO);
     }
 }
 

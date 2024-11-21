@@ -2,8 +2,8 @@
 package logicaNegocio;
 
 public class Goldeen extends Pokemon {
-    public Goldeen (String NOMBRE){
-        super(NOMBRE, 45, 67,TipoPokemon.AGUA);
+    public Goldeen (String nombre){
+        super(nombre, 45, 67,TipoPokemon.AGUA);
     }
 }
 
